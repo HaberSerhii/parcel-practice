@@ -1,0 +1,1 @@
+{"mappings":"AAAA,MAAMA,EAAiBC,SAASC,cAC9B,+CAGFC,QAAQC,IAAIJ","sources":["src/index.js"],"sourcesContent":["const lightThemeLink = document.querySelector(\n  'link[media=\"(prefers-color-scheme: light)\"]'\n);\n\nconsole.log(lightThemeLink);\n"],"names":["$1f0dc3b9307be026$var$lightThemeLink","document","querySelector","console","log"],"version":3,"file":"index.6d0569c4.js.map"}
