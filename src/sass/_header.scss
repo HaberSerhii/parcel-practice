@@ -1,0 +1,85 @@
+.practice-header {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin-right: 115px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 105px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-link {
+  display: block;
+  padding: 25px 0;
+}
+
+.button-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  margin-right: 25px;
+}
+
+.button-item {
+}
+
+.sign-in {
+}
+
+.sign-up {
+}
+
+.header-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px 2px;
+  border-radius: 100px;
+  border: 2px solid rgb(4, 75, 75);
+  background-color: teal;
+}
+
+.switcher-control {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.switcher-control:checked {
+  filter: invert(1);
+}
+
+.light-theme {
+  background-image: url(../images/light.svg);
+}
+.auto-theme {
+  background-image: url(../images/auto.svg);
+}
+.dark-theme {
+  background-image: url(../images/dark.svg);
+}
