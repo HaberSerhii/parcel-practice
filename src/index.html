@@ -1,27 +1,134 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Вказуємо браузеру, що на сторінці має працювати декілька тем, задаємо параметри -->
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f2e35" />
+    <!-- Поліфіл для старих браузерів, які не підтримують атрибут media -->
+    <script>
+      if (matchMedia("(prefers-color-scheme: dark)").media === "not all") {
+        document.documentElement.style.display = "none";
+        document.head.insertAdjacentHTML(
+          "beforeend",
+          '<link rel="stylesheet" href="styles/light.css" onload="document.documentElement.style.display=\'\'">'
+        );
+      }
+    </script>
+    <!-- Реалізація підключення різних файлів стилей залежно від системної теми та теми користувача -->
+    <link rel="stylesheet" href="./css/light-theme.css" media="(prefers-color-scheme: light)" />
+    <link rel="stylesheet" href="./css/dark-theme.css" media="(prefers-color-scheme: dark)" />
+    <!-- Основні налаштування для сторінки -->
+    <title>Theme switcher</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    <!-- Normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    <!-- Base styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container container">
+        <a href="" class="header-logo logo">
+          <svg class="logo-icon" width="40" height="36">
+            <use href="./images/icons.svg#logo"></use>
+          </svg>
+          Product
+        </a>
+        <nav class="header-nav nav">
+          <a href="" class="nav-link">Resources</a>
+          <a href="" class="nav-link">Pricing</a>
+          <a href="" class="nav-link">Customers</a>
+          <a href="" class="nav-link">Product</a>
+        </nav>
+        <ul class="header-controls">
+          <li class="header-controls-item">
+            <button class="header-controls-btn btn primary-btn" type="button">Sign In</button>
+          </li>
+          <li class="header-controls-item">
+            <button class="header-controls-btn btn secondary-btn" type="button">Sign Up</button>
+          </li>
+        </ul>
+        <fielset class="switcher">
+          <legend class="visually-hidden">Theme switcher</legend>
+          <input
+            class="switcher-control light"
+            type="radio"
+            name="switcher-btn"
+            value="light"
+            aria-label="Light theme"
+          />
+          <input
+            class="switcher-control auto"
+            type="radio"
+            name="switcher-btn"
+            value="auto"
+            aria-label="Auto theme"
+            checked
+          />
+          <input
+            class="switcher-control dark"
+            type="radio"
+            name="switcher-btn"
+            value="dark"
+            aria-label="Dark theme"
+          />
+          <div class="switcher-status"></div>
+        </fielset>
+      </div>
+    </header>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#ffffff">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#1f2e35">
-  <title>Page title</title>
-  <link rel="stylesheet" href="./sass/index.scss" />
-  <link rel="stylesheet" href="./sass/theme-dark.scss" media="(prefers-color-scheme: dark)" />
-  <link rel="stylesheet" href="./sass/theme-light.scss" media="(prefers-color-scheme: light)" />
-  <script type="module" src="./index.js"></script>
-</head>
-<header class="dark-theme"></header>
+    <main>
+      <section class="clients">
+        <div class="container">
+          <h2 class="clients-title">Our Clients</h2>
+          <ul class="clients-list">
+            <li class="clients-item">
+              <a href="" class="clients-link" target="_blank" rel="noopener noreferrer">
+                <svg class="clients-icon" width="160" height="50">
+                  <use href="./images/icons.svg#client-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="" class="clients-link" target="_blank" rel="noopener noreferrer">
+                <svg class="clients-icon" width="160" height="50">
+                  <use href="./images/icons.svg#client-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="" class="clients-link" target="_blank" rel="noopener noreferrer">
+                <svg class="clients-icon" width="215" height="50">
+                  <use href="./images/icons.svg#client-3"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="" class="clients-link" target="_blank" rel="noopener noreferrer">
+                <svg class="clients-icon" width="140" height="50">
+                  <use href="./images/icons.svg#client-4"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
-<body class="dark-theme">
-  <include src="./partials/header.html"></include>
-
-  <main>
-    <include src="./partials/clients.html"></include>
-  </main>
-
-</body>
-
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
 </html>

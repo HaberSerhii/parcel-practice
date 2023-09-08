@@ -1,0 +1,13 @@
+:root {
+  --main-bg: #1f2e35;
+  --main-txt-cl: #ffffff;
+  --shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* Зміна зовнішнього вигляду іконок радіокнопок */
+.switcher-control {
+  filter: invert(1);
+}
+.switcher-status {
+  filter: invert(1);
+}
