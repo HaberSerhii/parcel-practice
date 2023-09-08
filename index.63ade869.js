@@ -1,2 +1,0 @@
-document.querySelector('link[media="(prefers-color-scheme: light)"]'),document.querySelector('link[media="(prefers-color-scheme: dark)"]');document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelectorAll(".switcher-control"),t=document.body;e.forEach((function(e){e.addEventListener("change",(function(){const o=e.getAttribute("data-theme");t.classList.remove("light-theme","dark-theme"),t.classList.add(o)}))}))}));
-//# sourceMappingURL=index.63ade869.js.map
